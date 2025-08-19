@@ -41,10 +41,10 @@ let winning=[
 boxes.forEach((item)=>{
   item.addEventListener("click",()=>{
      if(currentplayer=="X"){
-      currentPlayerName.textContent=playerOne.value+","+"you're up";
+      currentPlayerName.textContent=playerOne.value+","+" you're up";
     }
     else{
-     currentPlayerName.textContent=playerTwo.value+","+"you're up";
+     currentPlayerName.textContent=playerTwo.value+","+" you're up";
     }
     
     if(currentplayer=="0"){
