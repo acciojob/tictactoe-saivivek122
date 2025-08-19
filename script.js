@@ -74,7 +74,7 @@ function winner(){
      currentPlayerName.textContent=playerOne.value+" congratulations you won!";
     }
     else{
-    currentPlayerName.textContent=playerTwo.value+"congratulations you won!";
+    currentPlayerName.textContent=playerTwo.value+" congratulations you won!";
     }
     document.body.appendChild(winText);
     clearBox();
