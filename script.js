@@ -71,12 +71,12 @@ function winner(){
 	
     // alert(currentplayer+"wins")
     if(currentplayer=="X"){
-      winText.textContent=playerOne.value+" congratulations you won!";
+     currentPlayerName.textContent=playerOne.value+" congratulations you won!";
     }
     else{
-      winText.textContent=playerTwo.value+" congratulations you won!";
+    currentPlayerName.textContent=playerTwo.value+" congratulations you won!";
     }
-    document.body.appendChild(winText);
+    // document.body.appendChild(winText);
     clearBox();
     return;
   }
