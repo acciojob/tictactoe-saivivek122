@@ -41,10 +41,10 @@ let winning=[
 boxes.forEach((item)=>{
   item.addEventListener("click",()=>{
      if(currentplayer=="X"){
-      currentPlayerName.textContent=playerOne.value+" "+"turn";
+      currentPlayerName.textContent=playerOne.value+","+"you're up";
     }
     else{
-     currentPlayerName.textContent=playerTwo.value+" "+"turn";
+     currentPlayerName.textContent=playerTwo.value+","+"you're up";
     }
     
     if(currentplayer=="0"){
@@ -72,7 +72,7 @@ function winner(){
       winText.textContent=playerOne.value+"Congratulations you won!";
     }
     else{
-      winText.textContent=playerTwo.value+" "+"wins";
+      winText.textContent=playerTwo.value+"Congratulations you won!";
     }
     document.body.appendChild(winText);
     clearBox();
