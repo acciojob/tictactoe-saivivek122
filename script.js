@@ -1,8 +1,8 @@
 //your JS code here. If required.
 let boxes=document.querySelectorAll(".box");
 let players=document.querySelector(".players");
-let playerOne=document.getElementById("player1");
-let playerTwo=document.getElementById("player2");
+let playerOne=document.getElementById("player-1");
+let playerTwo=document.getElementById("player-2");
 let container=document.querySelector(".containers");
 let submitBtn=document.getElementById("submit");
 let restartBtn=document.querySelector(".restart");
@@ -19,7 +19,7 @@ submitBtn.addEventListener("click",()=>{
     players.style.display="none";
     container.style.visibility="visible";
     restartBtn.style.display="block";
-    currentPlayerName.textContent=playerOne.value+","+"you're up";
+    currentPlayerName.textContent=playerOne.value+","+" you're up";
   }
   else{
     alert("both values required");
@@ -67,12 +67,14 @@ function winner(){
     if(boxes[a].textContent && boxes[a].textContent==boxes[b].textContent &&
     boxes[a].textContent==boxes[c].textContent){
     didWin=true;
+    currentPlayerName.textContent="";
+	
     // alert(currentplayer+"wins")
     if(currentplayer=="X"){
-      winText.textContent=playerOne.value+"Congratulations you won!";
+      winText.textContent=playerOne.value+" congratulations you won!";
     }
     else{
-      winText.textContent=playerTwo.value+"Congratulations you won!";
+      winText.textContent=playerTwo.value+" congratulations you won!";
     }
     document.body.appendChild(winText);
     clearBox();
