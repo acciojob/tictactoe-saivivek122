@@ -28,9 +28,9 @@ submitBtn.addEventListener("click",()=>{
 })
 
 
-let currentplayer="0";
+let currentplayer="o";
 let didWin=false;
-  console.log("hii");
+  // console.log("hii");
 let winning=[
       [0,1,2],[3,4,5],[6,7,8],
       [0,3,6],[1,4,7],[3,5,8],
@@ -40,21 +40,21 @@ let winning=[
 
 boxes.forEach((item)=>{
   item.addEventListener("click",()=>{
-     if(currentplayer=="X"){
+     if(currentplayer=="x"){
       currentPlayerName.textContent=playerOne.value+","+" you're up";
     }
     else{
      currentPlayerName.textContent=playerTwo.value+","+" you're up";
     }
     
-    if(currentplayer=="0"){
-      item.textContent="X";
-      currentplayer="X";
+    if(currentplayer=="o"){
+      item.textContent="x";
+      currentplayer="x";
      
     }
     else{
-      item.textContent="0";
-      currentplayer="0";
+      item.textContent="o";
+      currentplayer="o";
     }
       winner();
   })
@@ -70,13 +70,13 @@ function winner(){
     currentPlayerName.textContent="";
 	
     // alert(currentplayer+"wins")
-    if(currentplayer=="X"){
+    if(currentplayer=="x"){
      currentPlayerName.textContent=playerOne.value+" congratulations you won!";
     }
     else{
     currentPlayerName.textContent=playerTwo.value+" congratulations you won!";
     }
-    // document.body.appendChild(winText);
+    document.body.appendChild(winText);
     clearBox();
     return;
   }
