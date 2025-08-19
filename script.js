@@ -1,8 +1,8 @@
 //your JS code here. If required.
 let boxes=document.querySelectorAll(".box");
 let players=document.querySelector(".players");
-let playerOne=document.getElementById("player-1");
-let playerTwo=document.getElementById("player-2");
+let playerOne=document.getElementById("player1");
+let playerTwo=document.getElementById("player2");
 let container=document.querySelector(".containers");
 let submitBtn=document.getElementById("submit");
 let restartBtn=document.querySelector(".restart");
@@ -69,7 +69,7 @@ function winner(){
     didWin=true;
     // alert(currentplayer+"wins")
     if(currentplayer=="X"){
-      winText.textContent=playerOne.value+" "+"wins";
+      winText.textContent=playerOne.value+"Congratulations you won!";
     }
     else{
       winText.textContent=playerTwo.value+" "+"wins";
